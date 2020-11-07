@@ -17,7 +17,7 @@ class SMS():
 
 class SendSMS():
 	def __init__(self):
-		self.URL = 'http://192.168.8.1/' #the url for the donge, this is usually http://192.168.8.1/
+		self.URL = 'http://192.168.8.1/' #the url for the dongle, this is usually http://192.168.8.1/
 		self.default_page = self.URL+'html/index.html'
 		self.sms_sender_URL = self.URL+'html/smsinbox.html'
 		self.sms_send_url = self.URL+'api/sms/send-sms'
@@ -85,11 +85,11 @@ class SendSMS():
 						
 if __name__ == '__main__':
 
-	number = ''
+	number = '+33633505153'
 	sms = SMS()
 	sms.send_to.append(number)
 	sms.message = 'HELLO WORLD'
 
 	smsSender = SendSMS()
 	smsSender.send(sms)
-	print 'Done!'
+	print('Done!')
