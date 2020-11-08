@@ -14,9 +14,9 @@ After=multi-user.target
 Type=idle
 # MUST SET YOUR USERNAME HERE.
 
-User=rock
-Environment="PATH=/home/rock/project/HuaweiSMSender"
-ExecStart=python /home/rock/project/HuaweiSMSender/rest.py
+User=ubuntu
+Environment="PATH=/home/ubuntu/projects/HuaweiSMSender"
+ExecStart=python /home/ubuntu/projects/HuaweiSMSender/rest.py
 Restart=always
 RestartSec=5
 
