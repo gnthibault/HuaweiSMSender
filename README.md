@@ -26,8 +26,11 @@ http://www.sunspot.co.uk/Projects/raspberrypi_LAN_master/SMS/SMS-textmessages.ht
 
 
 # Notes on NetworkManager
-sudo vim /etc/NetworkManager/NetworkManager.conf
-sudo vim /usr/lib/NetworkManager/conf.d/10-globally-managed-devices.conf
+sudo nmcli
+sudo nmcli dev set eth1 managed yes
+sudo vim /etc/network/interfaces (just auto lo stuff)
+sudo vim /etc/NetworkManager/NetworkManager.conf (ifupdown managed false)
+sudo vim /usr/lib/NetworkManager/conf.d/10-globally-managed-devices.conf (unmanaged-devices=*,except:type:wifi,except:type:ethernet)
 sudo service network-manager restart
 
 # Notes on setup up interfaces (eth1 on ubuntu raspi)
