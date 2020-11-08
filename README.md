@@ -24,6 +24,12 @@ python-bs4
 https://stackoverflow.com/questions/38016641/sending-and-receiving-sms-by-command-line-with-huawei-e3131-and-hilink-on-a-debi
 http://www.sunspot.co.uk/Projects/raspberrypi_LAN_master/SMS/SMS-textmessages.html
 
+
+# Notes on NetworkManager
+sudo vim /etc/NetworkManager/NetworkManager.conf
+sudo vim /usr/lib/NetworkManager/conf.d/10-globally-managed-devices.conf
+sudo service network-manager restart
+
 # Notes on setup up interfaces (eth1 on ubuntu raspi)
 Manage multiple NetworkManager connections autoconnect and start up priority in Linux.
 
