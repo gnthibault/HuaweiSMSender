@@ -1,10 +1,12 @@
 import requests, sys
 import xml.etree.ElementTree as ET
 from time import strftime
+import sys
 
-
+# use with python ./test.py 0123456789 "Test message"
+phone = sys.argv[1]
 msg = sys.argv[2]
-phone = sys.argv[1] #To fill
+
 ip = "192.168.8.1" #Dongle ip
 
 #Get token
